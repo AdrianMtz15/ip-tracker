@@ -1,7 +1,7 @@
 import { printIpInfo } from "./main.js"
 
 const blackIcon = new L.Icon({
-    iconUrl: '../images/marker-icon-2x-black.png',
+    iconUrl: './images/marker-icon-2x-black.png',
     shadowUrl: 'images/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
