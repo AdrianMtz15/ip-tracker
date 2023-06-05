@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="./styles/styes.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+</head>
+<body>
+  <header class="container__header">
+    <h1>IP Address Tracker</h1>
+    <div class="header__input-ip">
+      <input type="text" id="input-ip" placeholder="Search for any IP Address or Domain">
+      <span id="input-ip-icon">
+        <i></i>
+      </span>
+    </div>
+
+    <div class="header__ip-info">
+      <span class="ip-info__section ip-info__section-rightLine">
+        <h2 class="ip-info__ip-title">IP ADDRESS</h2>
+        <h3 class="ip-info__ip"></h3>
+      </span>
+      
+      <span class="ip-info__section ip-info__section-rightLine">
+        <h2 class="ip-info__location-title">LOCATION</h2>
+        <h3 class="ip-info__location"></h3>
+      </span>
+
+      <span class="ip-info__section ip-info__section-rightLine">
+        <h2 class="ip-info__timezone-title">TIMEZONE</h2>
+        <h3 class="ip-info__timezone"></h3>
+      </span>
+      
+      <span class="ip-info__section">
+        <h2 class="ip-info__isp-title">ISP</h2>
+        <h3 class="ip-info__isp"></h3>
+      </span>
+    </div>
+  </header>
+  <main class="container__main" id="map">
+
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script src="./src/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    --fontSizeTextInput: 1.8rem;
+    --veryDarkGray: hsl(0, 0%, 17%);
+    --darkGray: hsl(0, 0%, 59%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(2, auto) / 1 auto;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container__header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    grid-row: 1 / 2;
+    align-items: center;
+    justify-content: top;
+    background-image: url(../images/pattern-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container__header > h1 {
+    width: max-content;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.header__input-ip {
+    display: flex;
+    width: 90%;
+    height: auto;
+    max-width: 460px;
+}
+
+#input-ip {
+    width: 80%;
+    height: 70px;
+    padding: 0 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-style: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: var(--fontSizeTextInput);
+}
+
+#input-ip:focus {
+    outline-style: none;
+}
+
+#input-ip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    max-width: 70px;
+    height: 70px;
+    background-color: black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#input-ip-icon:active {
+    background-color: var(--darkGray);
+}
+
+#input-ip-icon i {
+    width: 13px;
+    height: 18px;
+    background-image: url(../images/icon-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: 500;
+}
+
+.header__ip-info {
+    padding: 20px;
+    position: absolute;
+    top: 185px;
+    width: 80%;
+    max-width: 400px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    z-index: 2;
+}
+
+.header__ip-info h2 {
+    margin-bottom: 5px;
+    height: max-content;
+    color: var(--darkGray);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.header__ip-info h3 {
+    margin-bottom: 15px;
+    color: var(--veryDarkGray);
+    font-size: var(--fontSizeTextInput);
+    font-weight: 700;
+}
+
+.container__main {
+    position: unset;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    background-color: gray;
+    z-index: 1;
+}
+
+@media (min-width: 1440px) {
+   .header__ip-info {
+       top: 85%;
+       width: max-content;
+       flex-direction: row;
+       max-width: 80%;
+       justify-content: space-around;
+   }
+
+   .ip-info__section {
+       width: 150px;
+       text-align: left;
+   }
+
+   .ip-info__section h2,
+   .ip-info__section h3 {
+       max-width: 90%;
+   }
+
+   .ip-info__section-rightLine {
+        margin-right: 50px;
+        border-right: var(--darkGray) solid 1px;
+   }
+}
